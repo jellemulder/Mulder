@@ -1,0 +1,23 @@
+"use client";
+
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+
+export default function VisitLogger() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    fetch("/api/visit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        path: pathname,
+        ref: document.referrer || null,
+        ua: navigator.userAgent || null,
+      }),
+      keepalive: true,
+    }).catch(() => {});
+  }, [pathname]);
+
+  return null;
+}
