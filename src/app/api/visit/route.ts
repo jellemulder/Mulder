@@ -4,7 +4,6 @@ import { getDb } from "@/lib/mongodb";
 export async function POST(req: Request) {
   try {
     const body = await req.json().catch(() => ({}));
-
     const db = await getDb("appdb");
 
     const doc = {
@@ -18,9 +17,31 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ ok: true });
   } catch (e: any) {
-    return NextResponse.json(
-      { ok: false, error: e?.message ?? "unknown error" },
-      { status: 500 }
-    );
+    return NextResponse.json({ ok: false, error: e?.message ?? "unknown" }, { status: 500 });
+  }
+}
+
+export async function GET() {
+  try {
+    const db = await getDb("appdb");
+
+    const visits = await db
+      .collection("visits")
+      .find({}, { projection: { ts: 1, path: 1, ua: 1 } })
+      .sort({ ts: -1 })
+      .limit(10)
+      .toArray();
+
+    return NextResponse.json({
+      ok: true,
+      visits: visits.map(v => ({
+        id: String(v._id),
+        ts: v.ts,
+        path: v.path,
+        ua: v.ua,
+      })),
+    });
+  } catch (e: any) {
+    return NextResponse.json({ ok: false, error: e?.message ?? "unknown" }, { status: 500 });
   }
 }

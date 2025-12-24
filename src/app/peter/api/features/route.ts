@@ -1,10 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { dbClient } from '@/lib/mongodb';
+import { getDb } from '@/lib/mongodb';
 
 export async function GET() {
   try {
-    await dbClient.connect();
-    const db = dbClient.db('portfolio');
+    const db = await getDb('portfolio');
     const features = await db.collection('features').find({}).toArray();
     
     return NextResponse.json({ features });
@@ -23,8 +22,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
-    await dbClient.connect();
-    const db = dbClient.db('portfolio');
+    const db = await getDb('portfolio');
     
     const newFeature = {
       name,
@@ -56,8 +54,7 @@ export async function PUT(request: NextRequest) {
       return NextResponse.json({ error: 'Feature ID is required' }, { status: 400 });
     }
 
-    await dbClient.connect();
-    const db = dbClient.db('portfolio');
+    const db = await getDb('portfolio');
     
     const updateData = {
       ...(name && { name }),

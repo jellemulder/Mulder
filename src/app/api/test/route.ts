@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
-import { dbClient } from "@/lib/mongodb";
+import { getDb } from "@/lib/mongodb";
 
 export async function GET() {
-  await dbClient.connect();
-  const db = dbClient.db("testdb");
+  const db = await getDb("testdb");
 
   const collections = await db.collections();
 
