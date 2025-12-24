@@ -23,7 +23,7 @@ export default function Home() {
             <div className="mb-8">
               <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1">
                 <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center">
-                  <span className="text-4xl font-bold text-white">JM</span>
+                  <img src="/ProfilePicture.jpeg" alt="Profile picture" className="w-full h-full object-cover rounded-full" />
                 </div>
               </div>
             </div>
@@ -34,16 +34,23 @@ export default function Home() {
               Full Stack Developer & Software Engineer
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-12">
-              Passionate about creating innovative web applications and solving complex problems through code. 
-              Experienced in modern technologies and committed to delivering exceptional user experiences.
+              A social, ambitious Computer Science graduate from Utrecht University with a strong analytical mindset. 
+              Currently pursuing a master's in Business Development and Entrepreneurship, combining technical expertise with business acumen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105">
                 View My Work
               </button>
-              <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all">
+              <a 
+                href="/resume.pdf" 
+                download="Jelle_Mulder_Resume.pdf"
+                className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all text-center inline-flex items-center justify-center"
+              >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
                 Download Resume
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -62,18 +69,19 @@ export default function Home() {
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">My Journey</h3>
               <p className="text-gray-300 mb-6">
-                With a strong foundation in both frontend and backend development, I specialize in creating 
-                scalable web applications using modern technologies. My experience spans from building 
-                responsive user interfaces to designing robust server architectures.
+                I'm a Computer Science graduate from Utrecht University with a passion for both technology and business. 
+                My analytical skills help me solve complex problems, while I also value creative input from team members. 
+                I have successfully completed minors in Economics and Business Economics alongside my technical studies.
               </p>
               <p className="text-gray-300 mb-8">
-                I'm particularly passionate about JavaScript ecosystem, database design, and creating 
-                seamless user experiences that solve real-world problems.
+                Currently pursuing a master's in Business Development and Entrepreneurship, I combine technical expertise 
+                in languages like C#, Python, JavaScript, React, and SQL with business understanding. I hold a Cambridge CAE 
+                certificate and am fluent in English at a high level.
               </p>
               <div className="flex flex-wrap gap-3">
-                <span className="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">Problem Solver</span>
+                <span className="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">Analytical Thinker</span>
                 <span className="bg-blue-600/20 text-blue-300 px-3 py-1 rounded-full text-sm">Team Player</span>
-                <span className="bg-green-600/20 text-green-300 px-3 py-1 rounded-full text-sm">Continuous Learner</span>
+                <span className="bg-green-600/20 text-green-300 px-3 py-1 rounded-full text-sm">Business-Minded</span>
               </div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
@@ -81,15 +89,19 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                  <span className="text-gray-300">Based in Netherlands</span>
+                  <span className="text-gray-300">Based in Houten, Netherlands</span>
                 </div>
                 <div className="flex items-center">
                   <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                  <span className="text-gray-300">5+ Years Experience</span>
+                  <span className="text-gray-300">Born September 18, 2001</span>
                 </div>
                 <div className="flex items-center">
                   <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                  <span className="text-gray-300">50+ Projects Completed</span>
+                  <span className="text-gray-300">WO Bachelor Computer Science</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                  <span className="text-gray-300">Cambridge CAE Certified</span>
                 </div>
                 <div className="flex items-center">
                   <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
@@ -113,35 +125,58 @@ export default function Home() {
           <div className="space-y-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                <h3 className="text-xl font-bold text-white">Senior Full Stack Developer</h3>
-                <span className="text-purple-300 font-medium">2022 - Present</span>
+                <h3 className="text-xl font-bold text-white">Analist Markt & Strategie and Software Developer</h3>
+                <span className="text-purple-300 font-medium">Oct 2024 - Present</span>
               </div>
-              <p className="text-gray-400 mb-4">Company Name • Remote</p>
+              <p className="text-gray-400 mb-4">John & Co • Netherlands</p>
               <p className="text-gray-300 mb-4">
-                Led the development of scalable web applications using React, Next.js, and Node.js. 
-                Implemented robust database solutions with MongoDB and PostgreSQL.
+                Development of internal applications and digital tooling. Building front-end with React and JavaScript, 
+                working on back-end logic with PHP (Laravel) and PostgreSQL database. Integrated Twilio for 2FA SMS 
+                authentication and worked on data analysis with Python in a Scrum team environment with DevOps practices.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="bg-blue-600/20 text-blue-300 px-2 py-1 rounded text-xs">React</span>
-                <span className="bg-green-600/20 text-green-300 px-2 py-1 rounded text-xs">Node.js</span>
-                <span className="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-xs">MongoDB</span>
+                <span className="bg-yellow-600/20 text-yellow-300 px-2 py-1 rounded text-xs">JavaScript</span>
+                <span className="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-xs">PHP Laravel</span>
+                <span className="bg-green-600/20 text-green-300 px-2 py-1 rounded text-xs">PostgreSQL</span>
+                <span className="bg-red-600/20 text-red-300 px-2 py-1 rounded text-xs">Python</span>
+                <span className="bg-cyan-600/20 text-cyan-300 px-2 py-1 rounded text-xs">Twilio</span>
               </div>
             </div>
             
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                <h3 className="text-xl font-bold text-white">Full Stack Developer</h3>
-                <span className="text-purple-300 font-medium">2020 - 2022</span>
+                <h3 className="text-xl font-bold text-white">Software Developer (Bachelor Project)</h3>
+                <span className="text-purple-300 font-medium">Feb 2024 - Jul 2024</span>
               </div>
-              <p className="text-gray-400 mb-4">Previous Company • Netherlands</p>
+              <p className="text-gray-400 mb-4">Utrecht University • Netherlands</p>
               <p className="text-gray-300 mb-4">
-                Developed and maintained web applications, collaborated with cross-functional teams, 
-                and implemented modern development practices.
+                20-week bachelor completion project working 20 hours per week. Served as Product Owner in a Scrum team, 
+                developing a full-stack web application using React and TypeScript on the frontend, with FastAPI and SQL on the backend.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-yellow-600/20 text-yellow-300 px-2 py-1 rounded text-xs">JavaScript</span>
+                <span className="bg-blue-600/20 text-blue-300 px-2 py-1 rounded text-xs">React</span>
                 <span className="bg-blue-600/20 text-blue-300 px-2 py-1 rounded text-xs">TypeScript</span>
-                <span className="bg-red-600/20 text-red-300 px-2 py-1 rounded text-xs">PostgreSQL</span>
+                <span className="bg-green-600/20 text-green-300 px-2 py-1 rounded text-xs">FastAPI</span>
+                <span className="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-xs">SQL</span>
+                <span className="bg-orange-600/20 text-orange-300 px-2 py-1 rounded text-xs">Scrum</span>
+              </div>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <h3 className="text-xl font-bold text-white">Various Part-time Jobs</h3>
+                <span className="text-purple-300 font-medium">Mar 2018 - Aug 2024</span>
+              </div>
+              <p className="text-gray-400 mb-4">Various Companies • Netherlands</p>
+              <p className="text-gray-300 mb-4">
+                Gained work experience through various roles including stock clerk and delivery driver, 
+                developing strong work ethic and customer service skills while studying.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-gray-600/20 text-gray-300 px-2 py-1 rounded text-xs">Customer Service</span>
+                <span className="bg-gray-600/20 text-gray-300 px-2 py-1 rounded text-xs">Work Ethics</span>
+                <span className="bg-gray-600/20 text-gray-300 px-2 py-1 rounded text-xs">Time Management</span>
               </div>
             </div>
           </div>
@@ -168,15 +203,15 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-300">TypeScript</span>
+                  <span className="text-gray-300">JavaScript/TypeScript</span>
                   <div className="w-20 bg-gray-700 rounded-full h-2">
                     <div className="w-5/6 bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full"></div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-300">Tailwind CSS</span>
+                  <span className="text-gray-300">HTML/CSS</span>
                   <div className="w-20 bg-gray-700 rounded-full h-2">
-                    <div className="w-5/6 bg-gradient-to-r from-cyan-400 to-cyan-600 h-2 rounded-full"></div>
+                    <div className="w-4/5 bg-gradient-to-r from-cyan-400 to-cyan-600 h-2 rounded-full"></div>
                   </div>
                 </div>
               </div>
@@ -186,45 +221,45 @@ export default function Home() {
               <h3 className="text-xl font-bold text-white mb-4">Backend</h3>
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-300">Node.js</span>
+                  <span className="text-gray-300">Python/FastAPI</span>
                   <div className="w-20 bg-gray-700 rounded-full h-2">
                     <div className="w-4/5 bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full"></div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-300">MongoDB</span>
+                  <span className="text-gray-300">PHP/Laravel</span>
                   <div className="w-20 bg-gray-700 rounded-full h-2">
-                    <div className="w-4/5 bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full"></div>
+                    <div className="w-4/5 bg-gradient-to-r from-purple-400 to-purple-600 h-2 rounded-full"></div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-300">API Design</span>
+                  <span className="text-gray-300">SQL/PostgreSQL</span>
                   <div className="w-20 bg-gray-700 rounded-full h-2">
-                    <div className="w-5/6 bg-gradient-to-r from-purple-400 to-purple-600 h-2 rounded-full"></div>
+                    <div className="w-5/6 bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full"></div>
                   </div>
                 </div>
               </div>
             </div>
             
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all">
-              <h3 className="text-xl font-bold text-white mb-4">Tools & Others</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Languages & Tools</h3>
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-300">Git/GitHub</span>
+                  <span className="text-gray-300">C#</span>
                   <div className="w-20 bg-gray-700 rounded-full h-2">
-                    <div className="w-full bg-gradient-to-r from-orange-400 to-orange-600 h-2 rounded-full"></div>
+                    <div className="w-4/5 bg-gradient-to-r from-purple-400 to-purple-600 h-2 rounded-full"></div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-300">Docker</span>
+                  <span className="text-gray-300">Haskell</span>
                   <div className="w-20 bg-gray-700 rounded-full h-2">
-                    <div className="w-3/4 bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full"></div>
+                    <div className="w-3/5 bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full"></div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-300">AWS/Vercel</span>
+                  <span className="text-gray-300">Scrum/DevOps</span>
                   <div className="w-20 bg-gray-700 rounded-full h-2">
-                    <div className="w-4/5 bg-gradient-to-r from-yellow-400 to-yellow-600 h-2 rounded-full"></div>
+                    <div className="w-4/5 bg-gradient-to-r from-orange-400 to-orange-600 h-2 rounded-full"></div>
                   </div>
                 </div>
               </div>
@@ -243,7 +278,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a 
-              href="mailto:jelle@example.com" 
+              href="mailto:jellemulder2001@hotmail.com" 
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 inline-flex items-center justify-center"
             >
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -253,7 +288,7 @@ export default function Home() {
               Email Me
             </a>
             <a 
-              href="https://linkedin.com/in/jellemulder" 
+              href="https://www.linkedin.com/in/jelle-mulder-7458a6232/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all inline-flex items-center justify-center"
