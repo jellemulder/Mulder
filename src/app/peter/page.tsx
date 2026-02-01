@@ -56,7 +56,7 @@ export default function PeterDashboard() {
                   href="/" 
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  ← Back to Site
+                  ← Terug naar website
                 </Link>
                 <div className="w-8 h-8 rounded-full bg-gray-600 flex items-center justify-center">
                   <span className="text-sm text-white">JM</span>
