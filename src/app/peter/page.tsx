@@ -49,7 +49,7 @@ export default function PeterDashboard() {
                 <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 flex items-center justify-center">
                   <span className="text-sm font-bold text-white">P</span>
                 </div>
-                <h1 className="text-2xl font-bold text-white">Admin Dashboard</h1>
+                <h1 className="text-2xl font-bold text-white">{Peter Pagina}</h1>
               </div>
               <div className="flex items-center space-x-4">
                 <Link 
