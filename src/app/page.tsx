@@ -39,7 +39,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all transform hover:scale-105">
-                View My Work
+                Bekijk mijn portfolio
               </button>
               <a 
                 href="/resume.pdf" 
